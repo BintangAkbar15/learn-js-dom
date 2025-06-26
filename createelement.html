@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3 - Create Element</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Halo Dunia</h1>
+        <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        <p class="deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ratione.</p>
+        <p class="deskripsi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus officia assumenda dolores commodi ratione facere!</p>
+    </div>
+    <script>
+        let byId = document.getElementById('container')
+        let byTag = document.getElementsByTagName('h1')
+        let byClass = document.getElementsByClassName('deskripsi')
+        let querySelector = document.querySelector('.deskripsi')
+        let querySelectorAll = document.querySelectorAll('.deskripsi')
+
+        // Create Element
+        let div = document.createElement('div');
+        console.log(div)
+        // inserting value to element that we just create
+            // 1. TextContent
+                div.textContent = 'ALAMAK'
+                console.log(div)
+            // 2. InnerHTML
+                div.innerHTML = 'ALAMAK'
+                console.log(div)
+            // 3. InnerText
+                div.innerText = 'ALAMAK'
+                console.log(div)
+
+        // Adding The element to document
+            // 1. TextContent : Can't Insert HTML TAG
+                // div.textContent = '<p>ALAMAK</p>'
+                // document.body.appendChild(div)
+            // 2. InnerHTML : Can Insert HTML TAG
+                // div.innerHTML = '<p>ALAMAK</p>'
+                // document.body.appendChild(div)
+            // 3. InnerText : Can't Insert HTML TAG
+                // div.innerText = '<p>ALAMAK</p>'
+                // document.body.appendChild(div)
+     </script>
+</body>
+</html>

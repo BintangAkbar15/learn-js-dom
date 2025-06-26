@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2 - Traversing</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Halo Dunia</h1>
+        <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        <p class="deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ratione.</p>
+        <p class="deskripsi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus officia assumenda dolores commodi ratione facere!</p>
+    </div>
+    <script>
+        let byId = document.getElementById('container')
+        let byTag = document.getElementsByTagName('h1')
+        let byClass = document.getElementsByClassName('deskripsi')
+        let querySelector = document.querySelector('.deskripsi')
+        let querySelectorAll = document.querySelectorAll('.deskripsi')
+
+
+        // get child nodes
+        console.log(byId.childNodes)
+        // get first child
+        console.log(byId.firstElementChild);
+        // get last child
+        console.log(byId.lastElementChild);
+        // get parent node
+        console.log(querySelector.parentNode);
+        // get sibling elemen
+        console.log(querySelector.nextElementSibling);
+     </script>
+</body>
+</html>

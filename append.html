@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1 - Get Element</title>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="box">
+        <span>🔥</span>
+            Hello
+        <strong> Bye!</strong>
+    </div>
+    <script>
+        let byId = document.getElementById('container')
+        let box = document.getElementById("box");
+
+        let ul = document.createElement('ul')
+        let li = document.createElement('li')
+
+        li.textContent = 'alamak'
+        ul.appendChild(li)
+
+        console.log(ul)
+        
+        byId.append(ul , document.createElement('span'))
+
+        // Tambah elemen di awal dalam #box
+        box.insertAdjacentHTML("afterbegin", "<span>APIII APIII</span>");
+
+        // Tambah teks sebelum #box
+        box.insertAdjacentText("beforebegin", "Start: ");
+
+        // Tambah elemen DOM di akhir
+        let strong = document.createElement("strong");
+        strong.textContent = " Bye!";
+        box.insertAdjacentElement("beforeend", strong);
+
+        // clone node
+        let a = ul.cloneNode(true);
+        console.log(a)
+
+        // remove child
+        ul.removeChild(li)
+        console.log(ul);
+    </script>
+</body>
+</html>
