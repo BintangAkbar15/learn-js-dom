@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2 - Traversing</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Halo Dunia</h1>
+        <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+        <p class="deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ratione.</p>
+        <p class="deskripsi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus officia assumenda dolores commodi ratione facere!</p>
+        <input type="text" name="" id="keren">
+    </div>
+    <script>
+        let byId = document.getElementById('container')
+        let input = document.getElementById('keren')
+        
+        console.log(byId.attributes)
+        console.log(input.getAttribute('id'))
+        input.setAttribute('sangat-kachaw',true)
+        console.log(input.hasAttribute('id'))
+        
+        input.toggleAttribute('name')
+        console.log(byId.attributes)
+        </script>
+</body>
+</html>
